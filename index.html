@@ -1,104 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MAXY.FUN</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <header>
+  <header class="topbar">
     <div class="logo">MAXY.FUN</div>
 
     <nav>
-      <button id="homeButton">Home</button>
-      <button id="aboutButton">About</button>
+      <button id="homeBtn">Home</button>
+      <button id="aboutBtn">About</button>
     </nav>
   </header>
 
   <main>
 
     <section class="hero">
-      <h1>MAXY.FUN</h1>
 
-      <p>
-        Weird games. Fun experiments. Maximum chaos.
-      </p>
+      <div class="heroGlow"></div>
 
-      <div class="scrollHint">
-        ↓ pick something ↓
+      <div class="heroContent">
+
+        <p class="tinyTitle">WELCOME TO</p>
+
+        <h1>MAXY.FUN</h1>
+
+        <p class="heroText">
+          Weird games. Fun experiments. Maximum chaos.
+        </p>
+
+        <button id="exploreBtn" class="mainButton">
+          Explore the chaos ↓
+        </button>
+
       </div>
+
     </section>
 
-    <section id="projects" class="projects">
+    <section class="gamesSection" id="games">
 
-      <div class="game-card duck-card">
+      <div class="sectionHeading">
 
-        <div class="game-icon">
-          🦆
+        <div>
+          <p class="sectionMini">PLAY SOMETHING</p>
+          <h2>Featured</h2>
         </div>
 
-        <div class="game-info">
+        <span class="gameCount">1 GAME</span>
 
-          <h2>Don't Drop the Duck</h2>
+      </div>
 
-          <p>
-            Carry Gerald through rooftops, storms and terrible decisions.
+      <article class="featuredGame">
+
+        <div class="featuredArt">
+
+          <div class="skyCloud cloud1"></div>
+          <div class="skyCloud cloud2"></div>
+
+          <div class="roof"></div>
+
+          <div class="duckArt">
+            🦆
+          </div>
+
+          <div class="stormCloud">
+            ☁️
+          </div>
+
+          <div class="lightning">
+            ⚡
+          </div>
+
+          <span class="newBadge">
+            NEW
+          </span>
+
+        </div>
+
+        <div class="featuredInfo">
+
+          <p class="gameType">
+            BALANCE • PLATFORMER
           </p>
+
+          <h3>
+            Don't Drop the Duck
+          </h3>
+
+          <p class="description">
+            Carry Gerald across rooftops, moving platforms,
+            storms and increasingly terrible decisions.
+            Whatever happens...
+            do not drop the duck.
+          </p>
+
+          <div class="gameTags">
+            <span>🦆 Gerald</span>
+            <span>⚡ Storms</span>
+            <span>🏙️ 30 Levels</span>
+          </div>
 
           <button
-            class="play-button"
-            data-game="duck"
+            class="playButton"
+            id="duckPlayBtn"
           >
-            PLAY
+            PLAY NOW
           </button>
 
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="comingSection">
+
+      <div class="sectionHeading">
+
+        <div>
+          <p class="sectionMini">THE LAB</p>
+          <h2>More chaos is coming.</h2>
         </div>
 
       </div>
 
-      <div class="game-card coming-soon">
+      <div class="comingGrid">
 
-        <div class="game-icon">
-          ?
-        </div>
+        <div class="comingCard">
 
-        <div class="game-info">
+          <div class="comingIcon">
+            🚧
+          </div>
 
-          <h2>Something Strange</h2>
-
-          <p>
-            A new MAXY.FUN experiment is coming soon.
-          </p>
-
-          <button disabled>
-            COMING SOON
-          </button>
-
-        </div>
-
-      </div>
-
-      <div class="game-card coming-soon">
-
-        <div class="game-icon">
-          ⚡
-        </div>
-
-        <div class="game-info">
-
-          <h2>???</h2>
+          <h3>Game #2</h3>
 
           <p>
-            We genuinely have no idea what this will become.
+            Something strange is being built.
           </p>
 
-          <button disabled>
-            LOCKED
-          </button>
+          <span class="statusBadge">
+            COOKING
+          </span>
+
+        </div>
+
+        <div class="comingCard">
+
+          <div class="comingIcon">
+            🧪
+          </div>
+
+          <h3>Experiments</h3>
+
+          <p>
+            Tiny interactive things nobody asked for.
+          </p>
+
+          <span class="statusBadge">
+            SOON
+          </span>
+
+        </div>
+
+        <div class="comingCard">
+
+          <div class="comingIcon">
+            ❓
+          </div>
+
+          <h3>???</h3>
+
+          <p>
+            We have absolutely no idea either.
+          </p>
+
+          <span class="statusBadge">
+            MYSTERY
+          </span>
 
         </div>
 
@@ -108,33 +192,49 @@
 
   </main>
 
-  <div id="aboutPanel" class="panel">
+  <footer>
+    <strong>MAXY.FUN</strong>
+    <span>made for fun.</span>
+  </footer>
 
-    <div class="panelBox">
+  <div
+    class="modalOverlay"
+    id="aboutModal"
+  >
 
-      <button id="closeAbout">
-        ✕
+    <div class="modal">
+
+      <button
+        class="closeModal"
+        id="closeAbout"
+      >
+        ×
       </button>
+
+      <p class="sectionMini">
+        ABOUT
+      </p>
 
       <h2>What is MAXY.FUN?</h2>
 
       <p>
-        MAXY.FUN is a collection of small games,
-        experiments and random internet nonsense.
+        MAXY.FUN is a collection of weird browser games,
+        experiments and interactive nonsense.
       </p>
 
       <p>
-        Everything is designed to be quick to understand,
-        easy to play and slightly ridiculous.
+        No massive downloads.
+        No boring launcher.
+        Just click something and have fun.
+      </p>
+
+      <p class="modalChaos">
+        Maximum chaos encouraged.
       </p>
 
     </div>
 
   </div>
-
-  <footer>
-    <p>MAXY.FUN — made for fun.</p>
-  </footer>
 
   <script src="script.js"></script>
 
