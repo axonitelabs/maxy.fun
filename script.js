@@ -1,16 +1,26 @@
-const homeButton =
+const homeBtn =
   document.getElementById(
-    "homeButton"
+    "homeBtn"
   );
 
-const aboutButton =
+const aboutBtn =
   document.getElementById(
-    "aboutButton"
+    "aboutBtn"
   );
 
-const aboutPanel =
+const exploreBtn =
   document.getElementById(
-    "aboutPanel"
+    "exploreBtn"
+  );
+
+const duckPlayBtn =
+  document.getElementById(
+    "duckPlayBtn"
+  );
+
+const aboutModal =
+  document.getElementById(
+    "aboutModal"
   );
 
 const closeAbout =
@@ -18,13 +28,9 @@ const closeAbout =
     "closeAbout"
   );
 
-const playButtons =
-  document.querySelectorAll(
-    ".play-button"
-  );
+// HOME
 
-
-homeButton.addEventListener(
+homeBtn.addEventListener(
   "click",
   () => {
 
@@ -36,42 +42,56 @@ homeButton.addEventListener(
   }
 );
 
+// EXPLORE
 
-aboutButton.addEventListener(
+exploreBtn.addEventListener(
   "click",
   () => {
 
-    aboutPanel.classList.add(
-      "active"
-    );
+    document
+      .getElementById("games")
+      .scrollIntoView({
+        behavior: "smooth"
+      });
 
   }
 );
 
+// ABOUT
+
+aboutBtn.addEventListener(
+  "click",
+  () => {
+
+    aboutModal.classList.add(
+      "open"
+    );
+
+  }
+);
 
 closeAbout.addEventListener(
   "click",
   () => {
 
-    aboutPanel.classList.remove(
-      "active"
+    aboutModal.classList.remove(
+      "open"
     );
 
   }
 );
 
-
-aboutPanel.addEventListener(
+aboutModal.addEventListener(
   "click",
   event => {
 
     if (
       event.target ===
-      aboutPanel
+      aboutModal
     ) {
 
-      aboutPanel.classList.remove(
-        "active"
+      aboutModal.classList.remove(
+        "open"
       );
 
     }
@@ -79,36 +99,32 @@ aboutPanel.addEventListener(
   }
 );
 
+document.addEventListener(
+  "keydown",
+  event => {
 
-playButtons.forEach(
-  button => {
+    if (
+      event.key ===
+      "Escape"
+    ) {
 
-    button.addEventListener(
-      "click",
-      () => {
+      aboutModal.classList.remove(
+        "open"
+      );
 
-        const game =
-          button.dataset.game;
+    }
 
-        if (
-          game ===
-          "duck"
-        ) {
+  }
+);
 
-          /*
-          REPLACE THIS WITH
-          YOUR ACTUAL
-          DON'T DROP THE DUCK
-          GITHUB PAGES LINK
-          */
+// DON'T DROP THE DUCK
 
-          window.location.href =
-            "https://axonitelabs.github.io/dont-drop-the-duck/";
+duckPlayBtn.addEventListener(
+  "click",
+  () => {
 
-        }
-
-      }
-    );
+    window.location.href =
+      "https://axonitelabs.github.io/dont-drop-the-duck/";
 
   }
 );
