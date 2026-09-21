@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAXY.FUN</title>
 
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">MAXY.FUN</div>
+
+    <nav>
+      <button id="homeButton">Home</button>
+      <button id="aboutButton">About</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h1>MAXY.FUN</h1>
+
+      <p>
+        Weird games. Fun experiments. Maximum chaos.
+      </p>
+
+      <div class="scrollHint">
+        ↓ pick something ↓
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+
+      <div class="game-card duck-card">
+
+        <div class="game-icon">
+          🦆
+        </div>
+
+        <div class="game-info">
+
+          <h2>Don't Drop the Duck</h2>
+
+          <p>
+            Carry Gerald through rooftops, storms and terrible decisions.
+          </p>
+
+          <button
+            class="play-button"
+            data-game="duck"
+          >
+            PLAY
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="game-card coming-soon">
+
+        <div class="game-icon">
+          ?
+        </div>
+
+        <div class="game-info">
+
+          <h2>Something Strange</h2>
+
+          <p>
+            A new MAXY.FUN experiment is coming soon.
+          </p>
+
+          <button disabled>
+            COMING SOON
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="game-card coming-soon">
+
+        <div class="game-icon">
+          ⚡
+        </div>
+
+        <div class="game-info">
+
+          <h2>???</h2>
+
+          <p>
+            We genuinely have no idea what this will become.
+          </p>
+
+          <button disabled>
+            LOCKED
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <div id="aboutPanel" class="panel">
+
+    <div class="panelBox">
+
+      <button id="closeAbout">
+        ✕
+      </button>
+
+      <h2>What is MAXY.FUN?</h2>
+
+      <p>
+        MAXY.FUN is a collection of small games,
+        experiments and random internet nonsense.
+      </p>
+
+      <p>
+        Everything is designed to be quick to understand,
+        easy to play and slightly ridiculous.
+      </p>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <p>MAXY.FUN — made for fun.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
